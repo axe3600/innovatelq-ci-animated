@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@utility text-gradient-brand {
+  background: linear-gradient(to right, #ff8a3d, #ea580c);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  color: #0f172a;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
