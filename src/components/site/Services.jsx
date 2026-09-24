@@ -13,7 +13,8 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-24 lg:py-32 bg-white text-slate-900 overflow-hidden">
+    // 🛠️ FIX GRIS : Remplacement de bg-white par bg-transparent sur la section générale
+    <section id="services" className="py-24 lg:py-32 bg-transparent text-slate-900 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         
         <div className="max-w-3xl mb-16">
@@ -27,13 +28,13 @@ export function Services() {
           {services.map((s, index) => (
             <motion.article 
               key={s.title}
-              // 💫 Animation Chic : Apparition progressive décalée par rapport à l'index de la carte
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, margin: "-100px" }}
               transition={{ duration: 0.7, delay: index * 0.15, ease: "easeOut" }}
               whileHover={{ y: -10, transition: { duration: 0.3 } }}
-              className="group bg-slate-50 border border-slate-200/80 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:border-orange-500/20 transition-all duration-300 h-full flex flex-col justify-between"
+              // 💡 On garde 'bg-white' ICI sur l'article pour qu'il ressorte en relief sur le fond gris !
+              className="group bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-md hover:shadow-xl hover:border-orange-500/20 transition-all duration-300 h-full flex flex-col justify-between"
             >
               <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
                 <img src={s.image} alt={s.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
@@ -60,7 +61,7 @@ export function Services() {
                 <motion.a 
                   href="#contact"
                   whileTap={{ scale: 0.98 }}
-                  className="w-full py-3 rounded-xl border border-orange-500/30 text-center text-xs font-bold text-orange-600 bg-white group-hover:bg-orange-500 group-hover:text-white group-hover:border-orange-500 transition-all duration-300 block shadow-sm"
+                  className="w-full py-3 rounded-xl border border-orange-500/20 text-center text-xs font-bold text-orange-600 bg-slate-50 group-hover:bg-orange-500 group-hover:text-white group-hover:border-orange-500 transition-all duration-300 block shadow-sm"
                 >
                   PARLER DE MON PROJET →
                 </motion.a>

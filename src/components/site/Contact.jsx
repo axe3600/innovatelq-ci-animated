@@ -6,10 +6,11 @@ export function Contact() {
   const [sent, setSent] = useState(false);
 
   return (
-    <section id="contact" className="py-24 bg-white text-slate-900 overflow-hidden border-b border-slate-100">
+    // 🛠️ FIX BOSS : Remplacement de bg-white par bg-slate-100 pour le fond gris clair
+    <section id="contact" className="py-24 bg-slate-100 text-slate-900 overflow-hidden border-b border-slate-200">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         
-        {/* 📋 PARTIE 1 : En-tête de section style innovatelq.fr */}
+        {/* En-tête de section style innovatelq.fr */}
         <div className="mb-14 text-left">
           <span className="text-xs font-mono text-orange-500 uppercase tracking-widest block mb-2">// Contact</span>
           <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-950">
@@ -95,7 +96,7 @@ export function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false, margin: "-50px" }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="lg:col-span-7 bg-white border border-slate-100 rounded-3xl p-8 sm:p-10 shadow-xl"
+            className="lg:col-span-7 bg-white border border-slate-200/80 rounded-3xl p-8 sm:p-10 shadow-xl"
           >
             <form
               onSubmit={(e) => {
@@ -156,7 +157,7 @@ export function Contact() {
                 </div>
               </div>
 
-              {/* Description */}
+              {/* Description du besoin */}
               <div className="space-y-2">
                 <label className="block text-xs font-bold text-slate-700 tracking-wide">Description du projet *</label>
                 <textarea name="description" required rows={4} placeholder="Parlez-nous de votre projet..." className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-sm focus:outline-none focus:border-orange-500 focus:bg-white transition-all duration-300 resize-none" />

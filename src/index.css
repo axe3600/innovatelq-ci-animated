@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #ffffff;
+  /* 🎨 FIX BOSS CHIRURGICAL : Un vrai gris moderne et bien visible, fini le faux blanc ! */
+  --color-background: #e2e8f0;
   --color-foreground: #0f172a;
-  --color-accent: #ff8a3d; /* L'orange emblématique d'INNOVATELQ */
+  --color-accent: #ff8a3d;
 }
 
 @utility text-gradient-brand {
@@ -12,7 +13,6 @@
   color: transparent;
 }
 
-/* 🎨 Effet contours fins orange sur fond blanc pour un rendu ultra-chic */
 @utility text-stroke-orange {
   color: transparent;
   -webkit-text-stroke: 1px rgba(255, 138, 61, 0.8);
@@ -20,12 +20,18 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #ffffff;
+  background-color: #e2e8f0;
 }
 
+/* 🔌 Application forcée du vrai gris sur l'ensemble du site */
 body {
-  background-color: #ffffff;
+  background-color: #e2e8f0;
   color: #0f172a;
   font-family: system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+
+/* 🎯 Optionnel : un petit effet de flou ou d'ombre pour faire ressortir les blocs blancs sur ce magnifique gris */
+.shadow-elegant {
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
 }

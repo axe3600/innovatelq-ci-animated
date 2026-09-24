@@ -24,7 +24,8 @@ export function Process() {
   }, []);
 
   return (
-    <section id="processus" className="py-24 bg-white text-slate-900 overflow-hidden border-b border-slate-100">
+    // 🛠️ FIX BOSS : Remplacement de bg-white par bg-slate-100 pour le fond gris clair harmonisé
+    <section id="processus" className="py-24 bg-slate-100 text-slate-900 overflow-hidden border-b border-slate-200">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         
         {/* En-tête de section avec effet d'apparition au défilement */}
@@ -62,8 +63,8 @@ export function Process() {
 
         {/* La frise chronologique horizontale interactive et automatisée */}
         <div className="relative mt-8 max-w-4xl mx-auto px-6 py-4">
-          {/* Ligne grise en arrière-plan */}
-          <div className="absolute top-1/2 left-6 right-6 h-0.5 bg-slate-100 -translate-y-1/2 z-0" />
+          {/* Ligne de liaison foncée sur fond gris clair */}
+          <div className="absolute top-1/2 left-6 right-6 h-0.5 bg-slate-300/60 -translate-y-1/2 z-0" />
           
           <div className="flex justify-between relative z-10">
             {steps.map((s, i) => {
@@ -85,6 +86,7 @@ export function Process() {
                   <motion.div 
                     animate={isActive ? { scale: [1, 1.2, 1] } : { scale: 1 }}
                     transition={{ duration: 0.4 }}
+                    // 💡 Les puces inactives sont en 'bg-white' pur pour trancher proprement avec le fond gris clair
                     className={`w-5 h-5 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${
                       isActive ? "bg-orange-500 border-orange-500 shadow-lg shadow-orange-500/40" : "bg-white border-slate-300 group-hover:border-slate-400"
                     }`}
