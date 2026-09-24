@@ -1,46 +1,72 @@
 import React from "react";
-import { Award, Sparkles, Lightbulb, Lock, HeartHandshake, Smile } from "lucide-react";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { motion } from "framer-motion";
+import { ScrollReveal } from "@/components/ui/scroll-reveal.jsx";
 
-const items = [
-  { icon: Award, title: "Expertise technique", desc: "Des ingénieurs expérimentés maîtrisant les technologies les plus avancées." },
-  { icon: Sparkles, title: "Solutions sur mesure", desc: "Chaque projet est unique et conçu selon vos besoins spécifiques." },
-  { icon: Lightbulb, title: "Innovation", desc: "Nous adoptons les meilleures pratiques et technologies émergentes." },
-  { icon: Lock, title: "Sécurité", desc: "Vos données et systèmes protégés selon les standards les plus stricts." },
-  { icon: HeartHandshake, title: "Accompagnement dédié", desc: "Un interlocuteur unique à vos côtés tout au long du projet." },
-  { icon: Smile, title: "Satisfaction client", desc: "Votre réussite est notre priorité et le moteur de nos efforts." },
+const points = [
+  { num: "01", label: "Les autres vendent des prestations.", bold: "Nous créons des actifs." },
+  { num: "02", label: "Les autres développent des sites web.", bold: "Nous développons des entreprises." },
+  { num: "03", label: "Les autres réalisent un projet.", bold: "Nous construisons un écosystème." }
 ];
 
 export function WhyUs() {
   return (
-    <section id="pourquoi" className="relative py-20 lg:py-24 bg-gradient-dark text-white overflow-hidden">
-      <div className="absolute inset-0 -z-0 opacity-30" style={{
-        backgroundImage: "radial-gradient(circle at 30% 20%, oklch(0.72 0.19 48 / 0.35) 0%, transparent 45%), radial-gradient(circle at 80% 80%, oklch(0.72 0.19 48 / 0.25) 0%, transparent 45%)"
-      }} />
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
-        <ScrollReveal animation="fade-up">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 text-xs font-semibold text-accent uppercase tracking-widest">
-              <span className="w-8 h-px bg-accent" /> Pourquoi nous choisir
-            </div>
-            <h2 className="mt-4 text-3xl lg:text-4xl font-bold leading-tight">
-              6 raisons de nous faire <span className="text-gradient-brand">confiance</span>
-            </h2>
-          </div>
-        </ScrollReveal>
-
-        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {items.map((it, index) => (
-            <ScrollReveal key={it.title} animation="fade-up" delay={(index % 3) * 150}>
-              <div className="group h-full rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur p-5 hover:bg-white/[0.06] hover:border-accent/40 hover:-translate-y-1 transition-all duration-300">
-                <div className="w-11 h-11 rounded-xl bg-accent/15 group-hover:bg-gradient-brand grid place-items-center transition-all duration-300">
-                  <it.icon size={20} className="text-accent group-hover:text-white transition-colors duration-300" />
+    <section id="pourquoi" className="py-24 lg:py-32 bg-white text-slate-900 overflow-hidden border-b border-slate-100">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        <div className="grid lg:grid-cols-12 gap-12 items-center">
+          
+          {/* 🌀 L'Orbite Tournante Infinie en style lumineux blanc/orange */}
+          <div className="lg:col-span-5 flex justify-center relative min-h-[300px]">
+            <ScrollReveal animation="zoom-in">
+              <div className="relative w-64 h-64 border border-orange-200 rounded-full flex items-center justify-center">
+                
+                {/* Anneau pointillé en rotation permanente */}
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
+                  className="absolute inset-0 border-2 border-dashed border-orange-300/60 rounded-full"
+                />
+                
+                {/* Noyau central blanc épuré */}
+                <div className="w-32 h-32 bg-white border border-orange-100 rounded-full shadow-xl flex items-center justify-center p-4 text-center z-10">
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-orange-600">Venture Studio</span>
                 </div>
-                <h3 className="mt-4 text-base font-bold">{it.title}</h3>
-                <p className="mt-2 text-sm text-white/65 leading-relaxed">{it.desc}</p>
+
+                {/* Satellite orbital orange en mouvement fluide permanent */}
+                <motion.div
+                  animate={{ rotate: -360 }}
+                  transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
+                  className="absolute w-4 h-4 bg-orange-500 rounded-full top-0 left-1/2 -translate-x-1/2 shadow-sm"
+                />
               </div>
             </ScrollReveal>
-          ))}
+          </div>
+
+          {/* Contenu textuel Noir et Orange */}
+          <div className="lg:col-span-7 space-y-8">
+            <ScrollReveal animation="fade-left">
+              <span className="text-xs font-mono text-orange-600 uppercase tracking-widest">// Ce qui nous différencie</span>
+              <h2 className="text-4xl font-extrabold tracking-tight text-slate-900 mt-2">
+                Nous ne facturons pas des heures. <br />
+                <span className="text-gradient-brand">Nous construisons des actifs.</span>
+              </h2>
+            </ScrollReveal>
+
+            <div className="space-y-6 pt-4 border-t border-slate-200">
+              {points.map((p, i) => (
+                <ScrollReveal key={p.num} animation="fade-up" delay={i * 100}>
+                  <div className="flex gap-4 items-start">
+                    <span className="text-xs font-mono text-orange-600 bg-orange-50 w-7 h-7 rounded-lg flex items-center justify-center shrink-0 font-bold border border-orange-200">
+                      {p.num}
+                    </span>
+                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                      {p.label} <span className="block font-bold text-slate-900 mt-0.5">{p.bold}</span>
+                    </p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
