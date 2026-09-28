@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import ecommerceImg from "@/assets/portfolio-ecommerce.png";
-import mobileImg from "@/assets/portfolio-mobile.png";
-import erpImg from "@/assets/portfolio-erp.png";
-import crmImg from "@/assets/portfolio-crm.png";
+import ecommerceImg from "@/assets/portfolio-ecommerce.webp";
+import mobileImg from "@/assets/portfolio-mobile.webp";
+import erpImg from "@/assets/portfolio-erp.webp";
+import crmImg from "@/assets/portfolio-crm.webp";
 
 const projects = [
   { title: "Plateforme e-commerce", cat: "Développement Web", desc: "Boutique en ligne complète avec paiement intégré et back-office.", image: ecommerceImg },
