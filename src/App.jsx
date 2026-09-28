@@ -4,12 +4,12 @@ import { SplashPreloader } from "./components/site/SplashPreloader";
 import { Navbar } from "./components/site/Navbar";
 import { Hero } from "./components/site/Hero";
 import { About } from "./components/site/About";
+import { Portfolio } from "./components/site/Portfolio";
 import {Collective} from './components/site/Collective';
 import { Services } from "./components/site/Services";
 import { WhyUs } from "./components/site/WhyUs";
 import { Ecosystem } from "./components/site/Ecosystem";
 import { Process } from "./components/site/Process";
-import { Portfolio } from "./components/site/Portfolio";
 import { Testimonials } from "./components/site/Testimonials";
 import { Faq } from "./components/site/Faq";
 import { Contact } from "./components/site/Contact";
@@ -45,12 +45,12 @@ export default function App() {
       <main className="bg-white">
         <Hero />
         <About />
+        <Portfolio />
         <Collective />
         <Services />
         <WhyUs />
         <Ecosystem />
         <Process />
-        <Portfolio />
         <Testimonials />
         <Faq />
         <Impact />
