@@ -102,7 +102,7 @@ export function Collective() {
                       <motion.div
                         animate={{ rotate: -360 }}
                         transition={{ repeat: Infinity, duration: 45, ease: "linear" }}
-                        whileHover={{ scale: 1.05, border: "1px solid rgba(249, 115, 22, 0.7)" }}
+                        whileHover={{ scale: 1.05, border: "1px solid rgba(249, 115, 22, 0.7)", background: "black" }}
                         className="w-48 p-4 bg-white/10 border border-white/20 rounded-xl shadow-[0_4px_25px_rgba(0,0,0,0.25)] backdrop-blur-md cursor-pointer transition-all duration-300 hover:shadow-[0_0_25px_rgba(249,115,22,0.4)] group-hover:bg-zinc-950/95 group-hover:border-orange-500/50 text-left group"
                       >
                         <div className="flex items-center gap-2 mb-1">
