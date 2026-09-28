@@ -37,7 +37,7 @@ export function Process() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="text-xs font-mono text-orange-600 uppercase tracking-widest block mb-2">// Notre méthode</span>
-          <h2 className="text-4xl font-extrabold tracking-tight text-slate-950 uppercase">DE L'IDÉE À LA COMMERCIALISATION</h2>
+          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-950 uppercase break-words">DE L'IDÉE À LA COMMERCIALISATION</h2>
         </motion.div>
 
         {/* Zone de description dynamique */}

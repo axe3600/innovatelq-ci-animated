@@ -9,7 +9,7 @@ const socialNetworks = [
     id: "fb",
     name: "Facebook",
     icon: (
-      <svg xmlns="http://w3.org" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
       </svg>
     ),
@@ -20,20 +20,20 @@ const socialNetworks = [
     id: "ln",
     name: "LinkedIn",
     icon: (
-      <svg xmlns="http://w3.org" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
         <rect x="2" y="9" width="4" height="12"/>
         <circle cx="4" cy="4" r="2"/>
       </svg>
     ),
     /* 🚀 LIEN PROFESSIONNEL LINKEDIN OFFICIAL */
-    url: "https://www.linkedin.com/search/results/all/?keywords=InnovatelQ&origin=ENTITY_SEARCH_HOME_HISTORY&heroEntityKey=urn%3Ali%3Aorganization%3A103442728&position=0"
+    url: "https://www.linkedin.com/company/103442728"
   },
   {
     id: "ig",
     name: "Instagram",
     icon: (
-      <svg xmlns="http://w3.org" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
@@ -86,13 +86,13 @@ export function Contact() {
 
                 <li className="flex items-center gap-4 group/item">
                   <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 grid place-items-center shrink-0 group-hover/item:border-orange-500/50 transition-colors duration-300">
-                    <svg xmlns="http://w3.org" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-orange-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-orange-400">
                       <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>
                     </svg>
                   </div>
                   <div className="min-w-0 flex-1">
                     <div className="text-[10px] uppercase font-mono tracking-wider text-slate-500">WhatsApp</div>
-                    <a href="https://wa.me" target="_blank" rel="noreferrer" className="text-sm font-semibold text-slate-200 hover:text-orange-400 transition-colors duration-300">+225 07 15 32 88 89</a>
+                    <a href="https://wa.me/2250715328889" target="_blank" rel="noreferrer" className="text-sm font-semibold text-slate-200 hover:text-orange-400 transition-colors duration-300">+225 07 15 32 88 89</a>
                   </div>
                 </li>
 
@@ -169,11 +169,11 @@ export function Contact() {
                                     `• Objet : ${fd.get("objet")}\n\n` +
                                     `💬 Projet : ${fd.get("description")}`;
                 // 3. 🚀 CONFIGURATION DU DESTINATAIRE (Sans "+", sans espaces)
-                const numeroEntreprise = "2250747568441"; 
+                const numeroEntreprise = "2250715328889"; // numéro WhatsApp INNOVATELQ 
                 // 4. 🔥 URL OFFICIELLE SÉCURISÉE AVEC LES DEUX SLASHES OBLIGATOIRES
-                const whatsappUrl = "https://whatsapp.com" + numeroEntreprise + "&text=" + encodeURIComponent(textMessage);
+                const whatsappUrl = "https://wa.me/" + numeroEntreprise + "?text=" + encodeURIComponent(textMessage);
                 // Ouvre le lien dans un nouvel onglet de manière fluide
-                window.open(whatsappUrl, "_blank");
+                window.open(whatsappUrl, "_blank", "noopener,noreferrer");
                 // Reset de l'état du formulaire
                 setSent(true);
                 setTimeout(() => setSent(false), 4000);

@@ -85,7 +85,7 @@ export function SiteAudio() {
   };
 
   return (
-    <div className="fixed bottom-24 right-4 z-50 flex flex-col gap-3 items-center">
+    <div className="fixed bottom-5 left-4 sm:left-auto sm:bottom-24 sm:right-4 z-50 flex flex-col gap-3 items-center">
       
       <AnimatePresence>
         {showScrollTop && (

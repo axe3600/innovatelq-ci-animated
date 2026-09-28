@@ -25,9 +25,9 @@ export function WhyUs() {
         <div className="grid lg:grid-cols-12 gap-16 items-center">
           
           {/* 🌀 Système Orbital Automatique (Cartes toujours horizontales) */}
-          <div className="lg:col-span-6 flex justify-center relative min-h-[520px] items-center">
+          <div className="lg:col-span-6 min-w-0 flex justify-center relative min-h-[360px] sm:min-h-[520px] items-center">
             <ScrollReveal animation="zoom-in">
-              <div className="relative w-[450px] h-[450px] flex items-center justify-center scale-90 sm:scale-100">
+              <div className="relative w-[450px] h-[450px] flex items-center justify-center scale-[0.65] sm:scale-100">
                 
                 {/* Grand halo lumineux dynamique */}
                 <div className="absolute w-72 h-72 bg-orange-500/10 rounded-full blur-3xl pointer-events-none" />
@@ -112,7 +112,7 @@ export function WhyUs() {
           </div>
 
           {/* Contenu textuel statique à Droite */}
-          <div className="lg:col-span-6 space-y-8">
+          <div className="lg:col-span-6 min-w-0 space-y-8">
             <ScrollReveal animation="fade-left">
               <span className="text-xs font-mono text-orange-600 uppercase tracking-wildest">// Ce qui nous différencie</span>
               <h2 className="text-4xl font-extrabold tracking-tight text-slate-900 mt-2 leading-tight">
