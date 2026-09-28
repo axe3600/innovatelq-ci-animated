@@ -95,12 +95,15 @@ export function Collective() {
                       }}
                       className="absolute"
                     >
-                      {/* 🚀 FIX RENDU : Remplacement du bg-zinc par un fond blanc transparent ultra-givre (bg-white/10) */}
+                      {/* 🚀 FIX RENDU HOVER NOIR : 
+                          - Par défaut : bg-white/10 (blanc transparent givré)
+                          - Au survol : group-hover:bg-zinc-950/95 (devient noir mat et opaque)
+                          - group-hover:border-orange-500/50 pour un contour net sur le noir */}
                       <motion.div
                         animate={{ rotate: -360 }}
                         transition={{ repeat: Infinity, duration: 45, ease: "linear" }}
                         whileHover={{ scale: 1.05, border: "1px solid rgba(249, 115, 22, 0.7)" }}
-                        className="w-48 p-4 bg-white/10 border border-white/20 rounded-xl shadow-[0_4px_25px_rgba(0,0,0,0.25)] backdrop-blur-md cursor-pointer transition-all duration-300 hover:shadow-[0_0_20px_rgba(249,115,22,0.25)] text-left group"
+                        className="w-48 p-4 bg-white/10 border border-white/20 rounded-xl shadow-[0_4px_25px_rgba(0,0,0,0.25)] backdrop-blur-md cursor-pointer transition-all duration-300 hover:shadow-[0_0_25px_rgba(249,115,22,0.4)] group-hover:bg-zinc-950/95 group-hover:border-orange-500/50 text-left group"
                       >
                         <div className="flex items-center gap-2 mb-1">
                           {/* Icône claire par défaut, orange sur le hover */}
@@ -112,8 +115,8 @@ export function Collective() {
                             {box.label}
                           </span>
                         </div>
-                        {/* Détail gris clair par défaut */}
-                        <p className="text-[10px] text-zinc-200 font-medium leading-normal pl-0.5 group-hover:text-zinc-300 transition-colors">
+                        {/* Détail gris clair par défaut, blanc-gris au survol pour rester lisible sur le fond noir */}
+                        <p className="text-[10px] text-zinc-200 font-medium leading-normal pl-0.5 group-hover:text-zinc-400 transition-colors">
                           {box.detail}
                         </p>
                       </motion.div>
