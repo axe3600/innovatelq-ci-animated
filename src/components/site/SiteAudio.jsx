@@ -5,10 +5,11 @@ import { Volume2, VolumeX, ArrowUp } from "lucide-react";
 export function SiteAudio() {
   const audioRef = useRef(null);
   
-  // Récupération de l'état mémorisé
+  // Récupération de l'état mémorisé : musique active par défaut,
+  // sauf si le visiteur l'a coupée lors d'une visite précédente
   const [isPlaying, setIsPlaying] = useState(() => {
     const savedAudioState = localStorage.getItem("innovatelq_audio_playing");
-    return savedAudioState === "true"; 
+    return savedAudioState !== "false";
   });
   
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -25,7 +26,7 @@ export function SiteAudio() {
     // si la mémoire dit "true", on force la lecture du MP3 automatiquement !
     const forceAutoplayOnInteraction = () => {
       const audio = audioRef.current;
-      const isCurrentlySavedTrue = localStorage.getItem("innovatelq_audio_playing") === "true";
+      const isCurrentlySavedTrue = localStorage.getItem("innovatelq_audio_playing") !== "false";
       
       if (audio && isCurrentlySavedTrue) {
         audio.play()
@@ -84,7 +85,7 @@ export function SiteAudio() {
   };
 
   return (
-    <div className="fixed bottom-24 right-4 z-50 flex flex-col gap-3 items-center">
+    <div className="fixed bottom-5 left-4 sm:left-auto sm:bottom-24 sm:right-4 z-50 flex flex-col gap-3 items-center">
       
       <AnimatePresence>
         {showScrollTop && (

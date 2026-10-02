@@ -62,7 +62,7 @@ export function Footer() {
                 <div className="flex gap-3 text-slate-400 items-center">
                   <MessageCircle size={16} className="text-orange-400 shrink-0" />
                   <span className="w-20 shrink-0 font-bold text-slate-300">WhatsApp :</span> 
-                  <a href="https://wa.me" target="_blank" rel="noreferrer" className="hover:text-white hover:underline transition-colors font-semibold text-slate-200">+225 07 15 32 88 89</a>
+                  <a href="https://wa.me/2250715328889" target="_blank" rel="noreferrer" className="hover:text-white hover:underline transition-colors font-semibold text-slate-200">+225 07 15 32 88 89</a>
                 </div>
                 
                 <div className="flex gap-3 text-slate-400 items-center">
